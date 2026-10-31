@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You-Loop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>You-Loop</h1>
+        <div class="controls">
+            <div class="input-group">
+                <label for="youtube-url">YouTube Video URL</label>
+                <input type="text" id="youtube-url" placeholder="https://www.youtube.com/watch?v=..." />
+            </div>
+            <div class="input-group">
+                <label for="loop-count">Number of Loops</label>
+                <input type="number" id="loop-count" value="1" min="1" />
+            </div>
+            <button id="play-button">Start Looping</button>
+        </div>
+
+        <div id="player-container">
+            <div id="player"></div>
+        </div>
+
+        <div id="status-container">
+            <p id="status-text">Enter a URL and click start!</p>
+        </div>
+
+        <div class="history-section">
+            <div class="history-header">
+                <h2>Recent Loops</h2>
+                <button id="clear-history">Clear History</button>
+            </div>
+            <ul id="history-list">
+                <!-- History items will be injected here -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
+</body>
+</html>
